@@ -1,0 +1,161 @@
+body {
+    background-color: #D3C7BB;
+    overflow: scroll;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%
+  }
+  
+.logo {
+    width: 50%;
+
+  }
+.profileimage {
+    width: 35%;
+    height: 35%;
+    margin: 2%;
+
+}  
+.maintext {
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    
+
+}
+.frontpagetext {
+    font-size: 20px;
+    padding-left: 20px;
+    text-align: center;
+    overflow: scroll;
+}
+
+/*Indeholder Mathilde Lykke Multimediedesign*/
+.topdiv {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: 2px solid black;
+    background-color: #E6E0D9;
+    overflow: scroll;
+}
+/* CSS https://getcssscan.com/css-buttons-examples */
+.CV-button {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color:#FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 200px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+
+/*Alle de andre boxes med ndhold*/
+.divtest {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: 2px solid black;
+    
+}
+
+/*Video-relateret styling*/
+.videotext {
+    text-align: center;
+    text-decoration: underline;
+}
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+/*Styling af egne projekter*/
+.ownworks {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 100%;
+}
+
+/*Tekst til egne projekter*/
+.ownworkstext {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* CV attributter på CV.html
+Kilde: https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html*/
+.CV-background {
+    height: 926px;
+    width: 100%;
+}
+
+
+/* Styling af footer */
+
+footer{
+    background-color: #645B53;
+    width: 100%;
+}
+
+footer p{
+    text-align: center; 
+    font-size: 15px;
+    color: white;
+
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.socialmedia-icons {
+    text-align: center;
+    padding: 6px;
+}
+
+
