@@ -1,0 +1,179 @@
+body {
+    background-size: 100%;
+    background-color: #D3C7BB;
+    overflow: scroll;
+    max-width: 100%;
+}
+
+h1 {   
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*Alt vedrørende første to grids, der indeholder eget værk + tekst: Mathilde Lykke, Multimediedesigner */
+.topgrid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.topgridimage {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    padding-bottom: 10%;
+    
+}
+
+.logo {
+    height: 150%;
+    width: 80%;
+    display: grid;
+    justify-content: center;
+    
+
+}
+.topgridtext {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    padding-bottom: 10%;
+}
+
+.maintext {
+    font-size: 115%;
+    text-align: center;
+    color: #3B3B4A;
+    font-family: ultra-regular;
+    
+
+}
+
+
+/*Om mig-sektionen*/
+/* Kilde: https://cssgrid-generator.netlify.app/ */
+.aboutmegrid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+}
+
+.profileimagegrid {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+}
+
+.profileimage {
+    width: 50%;
+    height: 100%;
+    margin: 2%;
+    border-radius: 100%;
+    display: grid;
+    justify-self: center;
+}  
+    
+.aboutmegrid {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.aboutmetext {
+    font-size: 115%;
+    text-align: center;
+    color: #3B3B4A;
+    font-family: ultra-regular;
+}
+
+/*Nehmap sektion*/
+.nehmapgrid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+.nehmaplogogrid {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    
+}
+
+.nehmapimage {
+    height: 85%;
+    width: 60%;
+    display: grid;
+    justify-self: center;
+}
+
+.nehmaptextgrid {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+}
+
+.nehmapdescriptiongrid {
+    border-style: dotted;
+    border-color: black;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+
+.bestpitchgrid {
+    border-style: dotted;
+    border-color: black;
+    grid-column: 2;
+    grid-row: 2;
+
+}
+
+.pitchimage {
+    height: 50%;
+    width: 50%;
+}
+
+/*Zealand ballet sektion*/
+.zealandballet-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.zealand1{
+    border-style: dotted;
+    border-color: black;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.zealand2 {
+    border-style: dotted;
+    border-color: black;
+    grid-column: 2;
+    grid-row: 1;
+}
