@@ -5,6 +5,9 @@ body {
     overflow: scroll;
     max-width: 100%;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 h1 {
     font-size: 115%;
@@ -20,7 +23,37 @@ h2
     color: #3B3B4A;
     font-family: ultra-regular;
 }
-
+/* CSS https://getcssscan.com/css-buttons-examples */
+.CV-button {
+    align-items: center;
+    background-color: #D98841;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color:#FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 200px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 22px;
+    padding-right: 22px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    margin: 0 auto;
+  }
 .redirecttext {
     color: black;
     font-weight: bold;
@@ -127,17 +160,24 @@ h2
 
 }
 .topgridtext {
+    margin-top: -1rem;
     grid-column: 2;
     grid-row: 1;
     justify-self: start;
     align-self: center;
-    
+    display: flex;
+    flex-direction: column;
+}
+
+.topgridtext h1, .topgridtext h2, .topgridtext button  {
+    margin: 0 auto 0.5rem auto;
 }
 
 
 /*Om mig-sektionen*/
 /* Kilde: https://cssgrid-generator.netlify.app/ */
 .aboutmegrid-container {
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -164,6 +204,7 @@ h2
 }  
     
 .aboutmegrid {
+    margin-top: 2.rem;
     grid-column: 2;
     grid-row: 1;
 }
@@ -202,11 +243,15 @@ h2
     
 }
 
-.nehmapimage {
-    height: 85%;
+.nehmapimage-link {
+    margin-top: 2rem;
     width: 60%;
     display: grid;
     justify-self: center;
+}
+
+.nehmapimage {
+    width: 100%;
 }
 
 .nehmaptextgrid {
@@ -216,28 +261,52 @@ h2
 }
 
 .nehmapdescriptiongrid {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/*Idékonurrence sektion*/
+.headingidea{
+    font-size: 115%;
+    text-align: left;
+    color: #3B3B4A;
+    font-family: ultra-regular;
+    padding-top: 5%;
+}
+
+.bestpitchgrid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.ide.comptext{
     grid-column: 2;
     grid-row: 2;
 }
 
 
-.bestpitchgrid {
+.pitchimage-link {
     grid-column: 1;
-    grid-row: 2;
-
-}
-
-.pitchimage {
     width: 95%;
     height: 100%;
     border-radius: 8px;
-    display: grid;
     justify-self: center;
     align-self: center;
     justify-content: center;
 }
+.pitchimage {
+    width: 100%;
+}
+
 
 /*Zealand ballet sektion*/
+.headingballet{
+    font-size: 115%;
+    text-align: left;
+    color: #3B3B4A;
+    font-family: ultra-regular;
+    padding-top: 5%;
+}
 .zealandballet-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -247,20 +316,53 @@ h2
 }
 
 .zealand1{
-    border-style: dotted;
-    border-color: black;
     grid-column: 2;
     grid-row: 1;
 }
 
 .zealand2 {
-    border-style: dotted;
-    border-color: black;
     grid-column: 1;
     grid-row: 1;
 }
 
+/*Video-relateret styling*/
+.headingvideo{
+    font-size: 115%;
+    text-align: center;
+    color: #3B3B4A;
+    font-family: ultra-regular;
+    padding-top: 5%;
+}
+
+.videotext {
+    margin-top: 15rem;
+    text-align: center;
+    text-decoration: underline;
+    grid-column: 1;
+    grid-row: 1;
+}
+.how2video-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .how2video-container iframe{
+    position: absolute;
+    top: 4rem;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+  }
+
+
 /*Egne værker-sektion på index.html */
+.own-works {
+    margin-top: 7rem;
+}
+
 .ownworks-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -324,6 +426,46 @@ h2
         height: 926px;
         justify-content: center;
         text-align: center;
+}
+
+/*Video-relateret styling*/
+.videotext {
+    text-align: center;
+    text-decoration: underline;
+}
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+/*nehmap.html-styling*/
+.nehamaplogo, .bestpitch {
+    height: 25%;
+    /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+
+}
+
+.nehmapheader, .idéheader {
+    font-size: 115%;
+    text-decoration: underline;
+    text-align: center;
+    
+    
 }
 
 

@@ -17,27 +17,28 @@
             <div class="topgridtext">
                 <h1 class="maintext">Mathilde Lykke</h1> 
                 <h2>Multimediedesigner</h2>
+                <button type="button" class="CV-button" onclick="window.location.href=CV.html">CV</button>
+            
             </div>
         </div>
 
         <header>
             <div class="topnav">
                 <nav class="navigation">
-        
-                <ul> <!-- navbar på min side-->
+                 <ul> <!-- navbar på min side-->
                     <li><a href="CV.html">CV</a></li>
-                    <li><a href="#">Om mig</a></li>
-                    <li><a href="#">Projekter</a></li>
-                    <li><a href="#">Kreativ fritid</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#about">Om mig</a></li>
+                    <li><a href="#projects">Projekter</a></li>
+                    <li><a href="#creative">Kreativ fritid</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                  </ul>
              </nav>
             </div>
          </header>
 
-         <a href="aboutme.html"><p class="aboutmetext">Om mig</p></a>
+         <a id="about"  href="aboutme.html"><p class="aboutmetext">Om mig</p></a>
         <!--Sidens indhold, container der definerer antallet af felter på siden-->
-        <div class="aboutmegrid-container">
+        <section class="aboutmegrid-container">
             <!--Om mig sektion-->
             <div class="profileimagegrid">
                 <a href="aboutme.html">
@@ -52,44 +53,66 @@
                     <a href="aboutme.html" class="redirecttext"><br>Læs mere her!</a>
                 </p>
             </div>
-        </div>
+        </section>
 
-        <h1 class="projectheader">Projekter</h1>
+        <section>
 
+            <h1 id="projects" class="projectheader">Projekter</h1>
+            
             <!--Nehmap præsentation sektion-->
-        <div class="nehmapgrid-container">
-            <div class="nehmaplogogrid">
-                <img src="logo/nehmap.png" alt="logo" class="nehmapimage">
-            </div>
-            <div class="nehmaptextgrid">
-                <p class="contentheader">Nehmap</p>
-                <p class="contenttext">Nehmap handlede om det og det</p>
-            </div>
-            <div class="nehmapdescriptiongrid">
-                <p class="contentheader">Iværksætter<br>konkurrence</p> 
-            </div>
+            <div class="nehmapgrid-container">
+                <div class="nehmaplogogrid">
+                    <a class="nehmapimage-link" href="Nehmap.html">
+                        <img src="logo/nehmap.png" alt="logo" class="nehmapimage">
+                    </a>
+                </div>
+                <div class="nehmaptextgrid">
+                    <a href="Nehmap.html"><p class="contentheader">Nehmap</p></a>
+                    <p class="contenttext">Nehmap handlede om det og det</p>
+                </div>
+                <div class="nehmapdescriptiongrid">
+                    <a href="Nehmap.html" class="redirecttext"><br>Læs mere her!</a>
+                </div>
+            </div> 
+            
+            <!--Idéknkurrence-->
+            <p class="headingidea">Idékonkurrence</p> 
             <div class="bestpitchgrid">
-                <img src="img/bestpitch.jpg" alt="logo" class="pitchimage">
-
+                <a class="pitchimage-link" href="idékonkurrence">
+                    <img src="img/bestpitch.jpg" alt="logo" class="pitchimage">
+                </a>
+                <div class="idecomp.text">
+                    <p> bla bla bla</p>
+                </div>
             </div>
-        </div>
-
-        <!--Zealand ballet-sektion-->
-
-        <div class="zealandballet-container">
-            <div class="zealand1">
-                <img src="img/logoballetnotext.png" alt="logo" class="pitchimage">
+            
+            
+            <!--Zealand ballet-sektion-->
+            <p class="headingballet">Zealand Ballet</p> 
+            <div class="zealandballet-container">
+                <div class="zealand1">
+                    <img src="img/logoballetnotext.png" alt="logo" class="pitchimage">
+                </div>
+                <div class="zealand2">
+                    <p>blablabla</p>
+                </div>
             </div>
-            <div class="zealand2">
-            <p>blablabla</p>
+            <!--video-->
+            <div class="how2video-container">
+                <p class="headingvideo">Video</p> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zUc_mFXE_0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="videotext">
+                    <p>Projektet handlede om bla bla bla</p>
+                </div>
             </div>
-        </div>
-
-        <!--Egne værker-sektion-->
-
-        <h1 class="projectheader">Egne kreative værker</h1>
-        <div class="ownworks-container">
-            <div class="birthdaycardgrid">
+        </section>
+            
+        <section class="own-works">
+            <!--Egne værker-sektion-->
+            
+            <h1 id="crative" class="projectheader">Egne kreative værker</h1>
+            <div class="ownworks-container">
+                <div class="birthdaycardgrid">
                 <img src="img/Fødselsdagskort.png" alt="logo" class="pitchimage">
             </div>
             <div class="balletgrid">
@@ -103,11 +126,13 @@
             </div>
             
         </div>
+        </section>
+
 
            
         <!-- Footer-sektion -->
 
-        <footer class="footer">
+        <footer id="contact" class="footer">
             <div class="footer-content">
                 <p>Mathilde Lykke <br>
                 Mail: <a href="mailto:math32t5@edu.zealand.dk">math32t5@edu.zealand.dk</a> <br>
