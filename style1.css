@@ -1,4 +1,5 @@
 /*Mere generelle og gennemgående stylings*/
+@media screen and (max-width: 770px) {
 body {
     background-size: 100%;
     background-color: #D3C7BB;
@@ -7,14 +8,14 @@ body {
 }
 html {
     scroll-behavior: smooth;
-}
+}    
 
 h1 {
     font-size: 115%;
     text-align: center;
     color: #3B3B4A;
     font-family: ultra-regular;
-}
+    }
 
 h2
 {
@@ -57,6 +58,7 @@ h2
 .redirecttext {
     color: black;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .contentheader {
@@ -65,24 +67,33 @@ h2
     color: #3B3B4A;
     font-family: ultra-regular;
     padding-top: 5%;
+    text-decoration: none;
 
 }
 
 .contenttext {
     width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    text-align: justify;
+    hyphens: auto;
+    font-size: 15px;
 
+}
+
+#button-container {
+    position: relative;
 }
 
 .backbutton {
-    background-color: #D3C7BB;
+    display: inline-flex;
     position: absolute;
-    text-indent: -15px;
-    padding: 5px 0 5px 10px;
-    width: 53px;
-    overflow: auto;
+     top:0;
+     left:0;
+     max-width: 200px;
+     min-height: 40px;
+
 }
-
-
 
 
 /* navigations linjen */
@@ -115,7 +126,7 @@ h2
     color: #3B3B4A;
     display: block;
     text-align: center;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
   }   
@@ -229,7 +240,7 @@ h2
 .nehmapgrid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     }
@@ -245,13 +256,15 @@ h2
 
 .nehmapimage-link {
     margin-top: 2rem;
-    width: 60%;
+    width: 90%;
     display: grid;
     justify-self: center;
+    padding-top: 0rem ;
 }
 
 .nehmapimage {
     width: 100%;
+    
 }
 
 .nehmaptextgrid {
@@ -268,20 +281,26 @@ h2
 /*Idékonurrence sektion*/
 .headingidea{
     font-size: 115%;
-    text-align: left;
+    text-align: right;
     color: #3B3B4A;
     font-family: ultra-regular;
-    padding-top: 5%;
+    padding-top: 0%;
 }
 
 .bestpitchgrid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
 }
 
 .ide.comptext{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.appvideo {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
 }
 
 
@@ -294,8 +313,9 @@ h2
     align-self: center;
     justify-content: center;
 }
-.pitchimage {
+.appimage {
     width: 100%;
+    height: 100%;
 }
 
 
@@ -324,8 +344,27 @@ h2
     grid-column: 1;
     grid-row: 1;
 }
+.balletimg{
+    width: 100%;
+}
 
 /*Video-relateret styling*/
+.how2video-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+
+  .headingvideogrid {
+    grid-column: 1;
+    grid-row: 1;
+
+  }
 .headingvideo{
     font-size: 115%;
     text-align: center;
@@ -334,33 +373,41 @@ h2
     padding-top: 5%;
 }
 
-.videotext {
-    margin-top: 15rem;
-    text-align: center;
-    text-decoration: underline;
+.videogrid{
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
 }
-.how2video-container{
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; 
-    height: 0;
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .how2video-container iframe{
+
+.how2video-container iframe{
     position: absolute;
+    display: grid;
     top: 4rem;
     left: 10%;
     width: 80%;
     height: 80%;
   }
 
+.videotextgrid {
+    grid-column: 1;
+    grid-row: 3;
+}
+.videotext {
+    margin-top: 15rem;
+    text-align: center;
+    text-decoration: underline;
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+}
+
+  
 
 /*Egne værker-sektion på index.html */
 .own-works {
     margin-top: 7rem;
+}
+.kreativheader {
+    margin: 1%;
 }
 
 .ownworks-container {
@@ -369,6 +416,10 @@ h2
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    }
+
+    .ownworksimage {
+        width: 100%;
     }
 
 
@@ -428,29 +479,11 @@ h2
         text-align: center;
 }
 
-/*Video-relateret styling*/
-.videotext {
-    text-align: center;
-    text-decoration: underline;
-}
-.iframe-container{
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; 
-    height: 0;
-  }
-  .iframe-container iframe{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 
 
 
 /*nehmap.html-styling*/
-.nehamaplogo, .bestpitch {
+.nehmaplogo {
     height: 25%;
     /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
     display: block;
@@ -460,14 +493,82 @@ h2
 
 }
 
-.nehmapheader, .idéheader {
+.nehmapheader {
+    font-size: 115%;
+    text-decoration: underline;
+    text-align: center;     
+}
+
+.nehmaptext {
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
+}
+/*idékonkurrence html*/
+.bestpitch {
+    height: 25%;
+    /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.idéheader {
     font-size: 115%;
     text-decoration: underline;
     text-align: center;
-    
-    
+}
+.idetext {
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
 }
 
+/*Video html*/
+.videoimg{
+    height: 50%;
+    /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+}
+
+.videoheader{
+    font-size: 115%;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.videotext{
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
+    text-decoration: none;
+    margin: 2%;
+}
+
+
+.balletheader {
+    font-size: 115%;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.balletimg { 
+    /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ballettext {
+    width: 100%;
+    text-align: justify;
+    hyphens: auto;
+    text-decoration: none;
+}
 
 /* Styling af footer/footer fra Dans, dans, dans tema (ballet) -  relativ ny styling og nye ikoner */
 
@@ -493,4 +594,607 @@ footer a{
 .socialmedia-icons {
     text-align: center;
     padding: 6px;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    body {
+        background-size: 100%;
+        background-color: #D3C7BB;
+        overflow: scroll;
+        max-width: 100%;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }    
+
+    
+    h1 {
+        font-size: 440%;
+        text-align: center;
+        color: #3B3B4A;
+        font-family: ultra-regular;
+        }
+    
+    h2
+    {
+        font-size: 175%;
+        text-align: center;
+        color: #3B3B4A;
+        font-family: ultra-regular;
+    }
+    /* CSS https://getcssscan.com/css-buttons-examples */
+    .CV-button {
+        align-items: center;
+        background-color: #D98841;
+        border: 0;
+        border-radius: 100px;
+        box-sizing: border-box;
+        color:#FFFFFF;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 20px;
+        max-width: 200px;
+        min-height: 40px;
+        min-width: 0px;
+        overflow: hidden;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 22px;
+        padding-right: 22px;
+        text-align: center;
+        touch-action: manipulation;
+        transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+        margin: 0 auto;
+      }
+    .redirecttext {
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    .contentheader {
+        font-size: 115%;
+        text-align: center;
+        color: #3B3B4A;
+        font-family: ultra-regular;
+        padding-top: 5%;
+        text-decoration: none;
+    
+    }
+    
+    .contenttext {
+        width: 100%;
+        display: inline-block;
+        overflow: hidden;
+        text-align: justify;
+        hyphens: auto;
+        font-size: 15px;
+    
+    }
+    
+    #button-container {
+        position: relative;
+    }
+    
+    .backbutton {
+        display: inline-flex;
+        position: absolute;
+         top:0;
+         left:0;
+         max-width: 200px;
+         min-height: 40px;
+    
+    }
+    
+    
+    /* navigations linjen */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+    /*Navigationstyle fra dans, dans, dans tema (ballet)*/  
+      .navigation ul {
+        display: flex; 
+        list-style: none;
+        justify-content: center;
+        text-transform: uppercase;
+        text-align: center;
+      
+      }
+      
+      .navigation ul li a {
+        text-decoration: none;
+        padding: 0.5rem 0.5rem;
+        color: #3B3B4A;
+        display: block;
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }   
+    
+      .topnav ul {
+        flex-direction: row;
+        }
+    
+    .navigation ul li a:hover{
+        background-color:#D98841;
+    }
+    
+    
+    /*Den øverste grid, der indeholder eget værk + tekst*/
+    .topgrid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 1px;
+        grid-row-gap: 0px;
+    
+    }
+    
+    .topgridimage {
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        
+    }
+      
+    .logo {
+        height: 75%;
+        width: 75%;
+        display: grid;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        padding-top: 10%;
+        
+    
+    }
+    .topgridtext {
+        margin-top: -1rem;
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: start;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .topgridtext h1, .topgridtext h2, .topgridtext button  {
+        margin: 0 auto 0.5rem auto;
+    }
+    
+    
+    /*Om mig-sektionen*/
+    /* Kilde: https://cssgrid-generator.netlify.app/ */
+    .aboutmegrid-container {
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 1px;
+        grid-row-gap: 0px;
+    }
+    
+    .profileimagegrid {
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        align-self: center;
+        justify-content: center;
+    }
+    
+    .profileimage {
+        width: 95%;
+        height: 100%;
+        border-radius: 8px;
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+    }  
+        
+    .aboutmegrid {
+        margin-top: 2.rem;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .aboutmetext {
+        font-size: 115%;
+        text-align: center;
+        color: #3B3B4A;
+        font-family: ultra-regular;
+        text-decoration: underline;
+        padding-top: 5%;
+    }
+    
+    
+    .projectheader {
+        text-decoration: underline;
+        font-weight: bold;
+        padding-top: 15%;
+    }
+    
+    /*Nehmap sektion*/
+    .nehmapgrid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+    
+    .nehmaplogogrid {
+        grid-column: 2;
+        grid-row: 1;
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        
+    }
+    
+    .nehmapimage-link {
+        margin-top: 2rem;
+        width: 90%;
+        display: grid;
+        justify-self: center;
+        padding-top: 0rem ;
+    }
+    
+    .nehmapimage {
+        width: 100%;
+        
+    }
+    
+    .nehmaptextgrid {
+        grid-column:1;
+        grid-row: 1;
+    
+    }
+    
+    .nehmapdescriptiongrid {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    /*Idékonurrence sektion*/
+    .headingidea{
+        font-size: 115%;
+        text-align: right;
+        color: #3B3B4A;
+        font-family: ultra-regular;
+        padding-top: 0%;
+    }
+    
+    .bestpitchgrid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
+    
+    .ide.comptext{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .appvideo {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    
+    .pitchimage-link {
+        grid-column: 1;
+        width: 95%;
+        height: 100%;
+        border-radius: 8px;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+    }
+    .appimage {
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    /*Zealand ballet sektion*/
+    .headingballet{
+        font-size: 115%;
+        text-align: left;
+        color: #3B3B4A;
+        font-family: ultra-regular;
+        padding-top: 5%;
+    }
+    .zealandballet-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    
+    .zealand1{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .zealand2 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .balletimg{
+        width: 100%;
+    }
+    
+    /*Video-relateret styling*/
+    .how2video-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 100%;
+        padding-bottom: 56.25%; 
+        height: 0;
+      }
+    
+      .headingvideogrid {
+        grid-column: 1;
+        grid-row: 1;
+    
+      }
+    .headingvideo{
+        font-size: 115%;
+        text-align: center;
+        color: #3B3B4A;
+        font-family: ultra-regular;
+        padding-top: 5%;
+    }
+    
+    .videogrid{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .how2video-container iframe{
+        position: absolute;
+        display: grid;
+        top: 4rem;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+      }
+    
+    .videotextgrid {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .videotext {
+        margin-top: 15rem;
+        text-align: center;
+        text-decoration: underline;
+        grid-column: 1;
+        grid-row: 1;
+        display: block;
+    }
+    
+      
+    
+    /*Egne værker-sektion på index.html */
+    .own-works {
+        margin-top: 7rem;
+    }
+    .kreativheader {
+        margin: 1%;
+    }
+    
+    .ownworks-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+    
+        .ownworksimage {
+            width: 100%;
+        }
+    
+    
+    .mylogogrid {
+            grid-column: 1;
+            grid-row: 2;
+            display: grid;
+            justify-self: center;
+            align-self: center;
+            
+        }
+        
+        
+    .balletgrid {
+            grid-column:1;
+            grid-row: 1;
+        
+        }
+        
+    .testgrid {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        
+        
+    .birthdaycardgrid {
+            grid-column: 2;
+            grid-row: 1;
+        
+        }
+    
+    
+    /*aboutme.html-styling*/
+    .aboutmepageimage {
+        height: 25%;
+        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    
+    }
+    
+    .aboutmeheader {
+        font-size: 115%;
+        text-decoration: underline;
+        text-align: center;
+        
+        
+    }
+    
+    /*CV.html-styling, Kilde: https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html */
+    .CV-background {
+            width:90%;
+            height: 926px;
+            justify-content: center;
+            text-align: center;
+    }
+    
+    
+    
+    
+    /*nehmap.html-styling*/
+    .nehmaplogo {
+        height: 25%;
+        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    
+    }
+    
+    .nehmapheader {
+        font-size: 115%;
+        text-decoration: underline;
+        text-align: center;     
+    }
+    
+    .nehmaptext {
+        width: 100%;
+        text-align: justify;
+        hyphens: auto;
+    }
+    /*idékonkurrence html*/
+    .bestpitch {
+        height: 25%;
+        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+    
+    .idéheader {
+        font-size: 115%;
+        text-decoration: underline;
+        text-align: center;
+    }
+    .idetext {
+        width: 100%;
+        text-align: justify;
+        hyphens: auto;
+    }
+    
+    /*Video html*/
+    .videoimg{
+        height: 50%;
+        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%; 
+    }
+    
+    .videoheader{
+        font-size: 115%;
+        text-decoration: underline;
+        text-align: center;
+    }
+    
+    .videotext{
+        width: 100%;
+        text-align: justify;
+        hyphens: auto;
+        text-decoration: none;
+        margin: 2%;
+    }
+    
+    
+    .balletheader {
+        font-size: 115%;
+        text-decoration: underline;
+        text-align: center;
+    }
+    
+    .balletimg { 
+        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ballettext {
+        width: 100%;
+        text-align: justify;
+        hyphens: auto;
+        text-decoration: none;
+    }
+    
+    /* Styling af footer/footer fra Dans, dans, dans tema (ballet) -  relativ ny styling og nye ikoner */
+    
+    footer{
+        background-color: #645B53;
+        width: 100%;
+    }
+    
+    footer p{
+        text-align: center; 
+        font-size: 15px;
+        color: white;
+        padding-top: 20px;
+        font-family: Arial, Helvetica, sans-seri;
+        font-size: 14px;
+    
+    
+    }
+    footer a{
+        text-decoration: none;
+        color: white;
+    }
+    .socialmedia-icons {
+        text-align: center;
+        padding: 6px;
+        }
+
+    
 }
