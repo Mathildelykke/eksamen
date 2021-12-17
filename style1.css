@@ -1,11 +1,12 @@
 /*Mere generelle og gennemgående stylings*/
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 0px)  {
 body {
     background-size: 100%;
     background-color: #D3C7BB;
     overflow: scroll;
     max-width: 100%;
     background-image: url("img/baggrund-4.png");
+    font-family: Arial, Helvetica, sans-serif;
 }
 html {
     scroll-behavior: smooth;
@@ -16,6 +17,7 @@ h1 {
     text-align: center;
     color: #3B3B4A;
     font-family: ultra-regular;
+    padding-top: 20%;
     }
 
 h2
@@ -35,9 +37,8 @@ h2
     color:#FFFFFF;
     cursor: pointer;
     display: inline-flex;
-    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
     justify-content: center;
     line-height: 20px;
     max-width: 200px;
@@ -71,27 +72,46 @@ h2
 
 }
 
-.contenttext {
-    width: 100%;
+.contenttextleft {
+    width: 90%;
     display: inline-block;
     overflow: hidden;
     text-align: justify;
     hyphens: auto;
     font-size: 15px;
+    padding-left: 10%;
+}
+
+.contenttextright {
+    width: 90%;
+    display: inline-block;
+    overflow: hidden;
+    text-align:justify;
+    hyphens: auto;
+    font-size: 15px;
 
 }
 
-#button-container {
-    position: relative;
-}
 
 .backbutton {
-    display: inline-flex;
-    position: absolute;
-     top:0;
-     left:0;
-     max-width: 200px;
-     min-height: 40px;
+    float: left;
+    border:none;
+    color: white;
+    background-color: #D98841;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-left: 2%;
+    margin-top: 0.5%;
+    border-radius: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    box-sizing: border-box;
+    color:#FFFFFF;
+    cursor: pointer;
+    touch-action: manipulation;
 
 }
   
@@ -114,6 +134,7 @@ h2
     font-size: 13px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    
   }   
 
   .topnav ul {
@@ -211,7 +232,7 @@ h2
     color: #3B3B4A;
     font-family: ultra-regular;
     text-decoration: underline;
-    padding-top: 5%;
+    padding-top: 10%;
     text-transform: uppercase;
 }
 
@@ -273,7 +294,7 @@ h2
     text-align: left;
     color: #3B3B4A;
     font-family: ultra-regular;
-    padding-top: 0%;
+    padding-top: 5%;
 }
 
 .bestpitchgrid {
@@ -382,34 +403,29 @@ h2
   }
 
   .tiedyevideo {
-      width: 100%;
+      width: 90%;
       height: 25%;
+      margin-left: 5%;
   }
 
 .videotextgrid {
     grid-column: 1;
     grid-row: 3;
 }
-.videotext {
-    margin-top: 15rem;
-    text-align: center;
-    text-decoration: underline;
-    grid-column: 1;
-    grid-row: 1;
-    display: block;
-}
 
+.contenttextvideo {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 15px;
+    text-align: justify;
+}
   
 
 /*Egne værker-sektion på index.html */
-.own-works {
-    margin-top: 7rem;
-}
-
 .ownworks-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     justify-content: center;
@@ -422,28 +438,11 @@ h2
         align-items: center;
     
     }
-
-
-.mylogogrid {
-        grid-column: 1;
-        grid-row: 2;
-        display: grid;
-        justify-self: center;
-        align-self: center;
-        justify-content: center;
-        
-    }
-    
     
 .balletgrid {
         grid-column:1;
         grid-row: 1;
     
-    }
-    
-.testgrid {
-        grid-column: 2;
-        grid-row: 2;
     }
     
     
@@ -453,6 +452,13 @@ h2
     
     }
 
+.ownworkslogo {
+        width: 25%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 25%;
+    }
 
 /*aboutme.html-styling*/
 .aboutmepageimage {
@@ -465,22 +471,22 @@ h2
 
 }
 
-.aboutmeheader {
-    font-size: 115%;
-    text-decoration: underline;
-    text-align: center;
-    
-    
+.aboutmecontent {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    margin-top: 5%;
 }
 
 /*CV.html-styling, Kilde: https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html */
 .CV-background {
-        width:90%;
-        height: 926px;
-        justify-content: center;
-        text-align: center;
+    width:90%;
+    height: 750px;
+    justify-content: center;
+    margin-left: 5%;
+    margin-top: 1%;
 }
-
 
 
 
@@ -488,24 +494,22 @@ h2
 .nehmaplogo {
     height: 25%;
     /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+    width: 25%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
 
 }
 
 .nehmapheader {
     font-size: 115%;
     text-decoration: underline;
-    text-align: center;     
+    text-align: center; 
+    text-transform: uppercase;   
+    padding-top: 10%; 
 }
 
-.nehmaptext {
-    width: 100%;
-    text-align: justify;
-    hyphens: auto;
-}
+
 /*idékonkurrence html*/
 .bestpitch {
     height: 25%;
@@ -520,57 +524,45 @@ h2
     font-size: 115%;
     text-decoration: underline;
     text-align: center;
-}
-.idetext {
-    width: 100%;
-    text-align: justify;
-    hyphens: auto;
+    text-transform: uppercase;
+    padding-top: 10%;
 }
 
 /*Video html*/
 .videoimg{
-    height: 50%;
+    height: 25%;
     /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%; 
+    width: 25%; 
 }
 
 .videoheader{
     font-size: 115%;
     text-decoration: underline;
     text-align: center;
+    text-transform: uppercase;
+    padding-top: 10%;
 }
 
-.videotext{
-    width: 100%;
-    text-align: justify;
-    hyphens: auto;
-    text-decoration: none;
-    margin: 2%;
-}
-
-
-.balletheader {
-    font-size: 115%;
-    text-decoration: underline;
-    text-align: center;
-}
-
-.balletimg { 
-    /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
+/*Ballet.html - styling */
+.balletpreview {
+    width: 45%;
+    height: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.ballettext {
-    width: 100%;
-    text-align: justify;
-    hyphens: auto;
-    text-decoration: none;
+.balletheader {
+    font-size: 115%;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10%;
 }
+
 
 /* Styling af footer/footer fra Dans, dans, dans tema (ballet) -  relativ ny styling og nye ikoner */
 
@@ -585,7 +577,7 @@ footer p{
     color: white;
     padding-top: 20px;
     font-family: Arial, Helvetica, sans-seri;
-    font-size: 14px;
+    font-size: 16px;
 
 
 }
@@ -606,6 +598,7 @@ footer a{
         text-align: left;
         color: #3B3B4A;
         font-family: ultra-regular;
+        padding-top: 5%;
         }
     
     h2
@@ -620,12 +613,14 @@ footer a{
         font-size: 18px;
     }
     
-    .contenttext {
-        text-align: left;
+    .contenttextright {
         font-size: 18px;
-    
-    
     }
+    .contenttextleft {
+        font-size: 18px;
+    }
+
+
     
     /* navigations linjen */
     /*Navigationstyle fra dans, dans, dans tema (ballet)*/    
@@ -654,16 +649,21 @@ footer a{
     /*Om mig-sektionen*/
     .profileimage {
         width: 300px;
-        height: 400px;
+        height: 420px;
     }  
         
     .aboutmetext {
-        font-size: 20px;
+        font-size: 22px;
+        padding-top: 5%;
+    }
+
+    .aboutmecontent {
+        font-size: 18px;
     }
     
+    /*Overskrift mellem sektioner */
     .projectheader {
-        font-size: 20px;
-        text-align: center;
+        font-size: 22px;
     }
     
     /*Nehmap sektion*/    
@@ -681,9 +681,10 @@ footer a{
     }
     
     /*Idékonurrence sektion*/
-    .headingidea{
-        font-size: 18px;
-        margin-top: 30px;
+    .idéheader {
+        font-size: 22px;
+        padding-top: 5%;
+
     } 
 
     .nehmapvideo {
@@ -726,132 +727,56 @@ footer a{
     
     }
 
-    .videotext {
-        margin-top: 15rem;
-        text-align: center;
-        text-decoration: underline;
-        grid-column: 1;
-        grid-row: 1;
-        display: block;
+    .contenttextvideo {
+        font-size: 18px;
     }
-    
-      
-    
+
+
     /*Egne værker-sektion på index.html */
-    .own-works {
-        margin-top: 7rem;
-    }
-    
      .ownworksimage {
             width: 300px;
             height: 350px;
             margin-left: 20%;
         }
-    
-    
-    
-    /*aboutme.html-styling*/
-    .aboutmepageimage {
-        height: 25%;
-        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 25%;
-    
-    }
-    
-    .aboutmeheader {
-        font-size: 115%;
-        text-decoration: underline;
-        text-align: center;
-        
-        
-    }
-    
-    /*CV.html-styling, Kilde: https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html */
-    .CV-background {
-            width:90%;
-            height: 926px;
-            justify-content: center;
-            text-align: center;
-    }
-    
-    
-    
-    
-    /*nehmap.html-styling*/
-    .nehmaplogo {
-        height: 25%;
-        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 25%;
-    
-    }
-    
+     
+
+
+                    /*Styling herunder tilhører de forskellige sub-pages*/
+
+
+    /*Nehmap.html-styling*/
     .nehmapheader {
-        font-size: 115%;
-        text-decoration: underline;
-        text-align: center;     
+        font-size: 22px;
+        padding-top: 5%;
     }
-    
+
     .nehmaptext {
-        width: 100%;
-        text-align: justify;
-        hyphens: auto;
+        font-size: 18px;
     }
+
     /*idékonkurrence html*/
-    .bestpitch {
-        height: 25%;
-        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 25%;
+
+    .headingidea {
+        font-size: 22px;
     }
-    
-    .idéheader {
-        font-size: 115%;
-        text-decoration: underline;
-        text-align: center;
-    }
+   
     .idetext {
-        width: 100%;
-        text-align: justify;
-        hyphens: auto;
+        font-size: 18px;
     }
     
     /*Video html*/
-    .videoimg{
-        height: 50%;
-        /* Kilde til centrering: https://www.w3schools.com/howto/howto_css_image_center.asp */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%; 
-    }
     
     .videoheader{
-        font-size: 115%;
-        text-decoration: underline;
-        text-align: center;
+        font-size: 22px;
+        padding-top: 5%;
     }
-    
-    .videotext{
-        width: 100%;
-        text-align: justify;
-        hyphens: auto;
-        text-decoration: none;
-        margin: 2%;
-    }
-    
-    
+        
+    /*ballet html*/
     .balletheader {
-        font-size: 115%;
-        text-decoration: underline;
-        text-align: center;
+        font-size: 22px;
+        padding-top: 5%;
+
+
     }
     
     .balletimg { 
@@ -860,39 +785,6 @@ footer a{
         margin-left: auto;
         margin-right: auto;
     }
-    
-    .ballettext {
-        width: 100%;
-        text-align: justify;
-        hyphens: auto;
-        text-decoration: none;
-    }
-    
-    /* Styling af footer/footer fra Dans, dans, dans tema (ballet) -  relativ ny styling og nye ikoner */
-    
-    footer{
-        background-color: #645B53;
-        width: 100%;
-    }
-    
-    footer p{
-        text-align: center; 
-        font-size: 15px;
-        color: white;
-        padding-top: 20px;
-        font-family: Arial, Helvetica, sans-seri;
-        font-size: 14px;
-    
-    
-    }
-    footer a{
-        text-decoration: none;
-        color: white;
-    }
-    .socialmedia-icons {
-        text-align: center;
-        padding: 6px;
-        }
 
     
 }
