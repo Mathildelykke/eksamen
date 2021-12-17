@@ -1,6 +1,7 @@
 /*Mere generelle og gennemgående stylings*/
 @media screen and (min-width: 0px)  {
 body {
+    overflow-x: hidden;
     background-size: 100%;
     background-color: #D3C7BB;
     overflow: scroll;
@@ -80,6 +81,7 @@ h2
     hyphens: auto;
     font-size: 15px;
     padding-left: 10%;
+    word-spacing: normal;
 }
 
 .contenttextright {
@@ -89,7 +91,7 @@ h2
     text-align:justify;
     hyphens: auto;
     font-size: 15px;
-
+    word-spacing: normal;
 }
 
 
